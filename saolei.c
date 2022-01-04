@@ -6,13 +6,13 @@
 #include"game.h"
 void game()
 {
-static char mine[ROWS][COLS]={ 0 };//×Ô¼º¿´µÄ
-static char show[ROWS][COLS]={ 0 };//¸øÍæ¼Ò¿´µÄ¡£
-intarr(mine,ROWS,COLS,'0');//³õÊ¼»¯£¬
-intarr(show,ROWS,COLS,'*');//³õÊ¼»¯
-displayarr(mine,ROW,COL);//´òÓ¡ÆåÅÌ
-displayarr(show,ROW,COL);//´òÓ¡ÆåÅÌ
-//²¼ÖÃÀ×
+static char mine[ROWS][COLS]={ 0 };//è‡ªå·±çœ‹çš„
+static char show[ROWS][COLS]={ 0 };//ç»™ç©å®¶çœ‹çš„ã€‚
+intarr(mine,ROWS,COLS,'0');//åˆå§‹åŒ–ï¼Œ
+intarr(show,ROWS,COLS,'*');//åˆå§‹åŒ–
+displayarr(mine,ROW,COL);//æ‰“å°æ£‹ç›˜
+displayarr(show,ROW,COL);//æ‰“å°æ£‹ç›˜
+//å¸ƒç½®é›·
 setmine(mine,ROW,COL);
 displayarr(mine,ROW,COL);
 findmine(mine,show,ROW,COL);
@@ -27,7 +27,7 @@ void test()
 srand((unsigned int)time(NULL));
 do
 {menu();
-printf("ÇëÊäÈëÊÇ·ñ½øÈëÓÎÏ·\n");
+printf("è¯·è¾“å…¥æ˜¯å¦è¿›å…¥æ¸¸æˆ\n");
 scanf("%d",&input);
 switch(input)
 {
@@ -35,10 +35,10 @@ switch(input)
      game();
     break;
     case 0:
-	printf("»¶Ó­ÏÂ´ÎÊ¹ÓÃ\n");
+	printf("æ¬¢è¿ä¸‹æ¬¡ä½¿ç”¨\n");
 	break;
 default:
-	printf("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë\n");
+	printf("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥\n");
 	break;}
 }while(input);}
 int main()
